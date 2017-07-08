@@ -1,5 +1,6 @@
 package com.cross.board;
 
+//°Ô½ÃÆÇ bean
 public class Board {
 	public int no;
 	public String subject;

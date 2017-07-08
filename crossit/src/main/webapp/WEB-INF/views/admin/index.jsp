@@ -3,9 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <body>
-
   <section id="container" >
-  
    		<!-- 헤더 -->
       <%@ include file="header.jsp" %>
      	 <!-- 사이드-->
