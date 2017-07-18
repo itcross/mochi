@@ -1,4 +1,4 @@
-package com.cross.service;
+package com.cross.board;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,8 +6,6 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.cross.model.Board;
 
 @Repository
 public class BoardDao {

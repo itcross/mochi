@@ -1,10 +1,13 @@
-package com.cross.service;
+package com.cross.user;
+
+import java.util.HashMap;
+import java.util.List;
+
+import javax.jws.soap.SOAPBinding.Use;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.cross.model.User;
 
 @Repository
 public class UserDaoImpl implements UserDao {

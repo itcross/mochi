@@ -1,4 +1,4 @@
-package com.cross.model;
+package com.cross.user;
 
 public class User {
 	public int user_no;
