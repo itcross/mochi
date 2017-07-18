@@ -1,4 +1,4 @@
-package com.cross.controller;
+package com.cross.user;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -25,8 +25,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.cross.model.User;
-import com.cross.service.UserDaoImpl;
 import com.cross.util.MailService;
 import com.cross.util.Validation;
 

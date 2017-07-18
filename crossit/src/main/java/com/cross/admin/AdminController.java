@@ -1,4 +1,4 @@
-package com.cross.controller;
+package com.cross.admin;
 
 import java.text.DateFormat;
 import java.util.Date;
