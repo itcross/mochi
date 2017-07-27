@@ -1,25 +1,42 @@
+
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<!DOCTYPE HTML>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
-<title>Insert title here</title>
-</head>
-<body>
-<div class="top">
-	
-	</div>
-	<div class="head">
-		<ul class="left">
-			<li><a href="#">로그인</a></li>
-			<li><a href="#">회원가입</a></li>
-			<li><a href="#">고객센터</a></li>
-			<li><a href="#">보고서</a></li>
-			<li><a href="#">일정관리</a></li>
-			<li><a href="#">사용자관리</a></li>
-		</ul>
-	</div>
-</body>
+	<head>
+		<title>Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css?ver=0.1">
+	</head>
+	<body class="landing">
+		<!-- Header -->
+			<header id="header">
+			<div class="top_blue"></div>
+				<div class="tophead">
+				<h1 id="logo"><a href="#"></a></h1>
+					<div id="tomember">
+						<ul style="width: 329px;">
+							<li style="width: 30%;"><a href="login">로그인</a></li>
+							<li style="width: 30%;"><a href="join_agree">회원가입</a></li>
+							<li style="width: 40%;"><a href="findid">ID/PW 찾기</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="cat">
+					<ul class="menu">
+						<li><a href="#">포트폴리오</a></li>
+						<li><a href="#">재능기부</a></li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">게시글 등록</a></li>
+						<li><a href="mypage">마이페이지</a></li>
+					</ul>
+				</div>
+			</header>
+	</body>
 </html>

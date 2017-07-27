@@ -14,7 +14,7 @@
 						<h3>ID/PW 찾기</h3>
 						<div class="findmenu">
 							<ul>
-								<li><a href="findid.html">ID찾기</a></li>
+								<li><a href="findid">ID찾기</a></li>
 								<li id="on"><a href="#">PW찾기</a></li>
 							</ul>
 						</div>						
@@ -42,7 +42,7 @@
 							</table>
 							<div class="select" id="selectpw"><a href="#">조회</a></div>
 							<div class="result" style="display:none;"><p>임시 비밀번호는 <span id="fpw"></span> 입니다.</p></div>
-							<div class="goto" style="display:none;"><a href="login.html">로그인 바로가기</a></div>
+							<div class="goto" style="display:none;"><a href="login">로그인 바로가기</a></div>
 						</div>
 						
 					</div>

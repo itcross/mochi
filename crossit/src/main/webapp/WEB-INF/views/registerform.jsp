@@ -103,30 +103,7 @@
 	<body class="landing">
 	
 		<div id="page-wrapper">
-
-			<!-- Header -->
-				<header id="header">
-				<div class="top_blue"></div>
-					<div class="tophead">
-					<h1 id="logo"><a href="#"></a></h1>
-						<div id="tomember">
-							<ul style="width: 329px;">
-								<li style="width: 30%;"><a href="login.html">로그인</a></li>
-								<li style="width: 30%;"><a href="join_agree.html">회원가입</a></li>
-								<li style="width: 40%;"><a href="findid.html">ID/PW 찾기</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="cat">
-						<ul class="menu">
-							<li><a href="#">포트폴리오</a></li>
-							<li><a href="#">재능기부</a></li>
-							<li><a href="#">공지사항</a></li>
-							<li><a href="#">게시글 등록</a></li>
-							<li><a href="modify_info.html">마이페이지</a></li>
-						</ul>
-					</div>
-				</header>
+			<jsp:include page="header.jsp"></jsp:include>
 				<div class="sub_container">
 					<div class="content">
 						<h3>회원가입</h3>
@@ -230,28 +207,7 @@
 						</div> 
 					</div>
 				</div>
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="foot_menu">
-					<ul>	
-						<li style="width: 16.6%;"><a href="#">사이트소개</a></li>
-						<li style="width: 16.6%;"><a href="#">이용약관</a></li>
-						<li style="width: 16.6%;"><a href="#">개인정보보호정책</a></li>
-						<li style="width: 16.6%;"><a href="#">저작권보호정책</a></li>
-						<li style="width: 16.6%;"><a href="#">사이트맵</a></li>
-						<li style="width: 16.6%;"><a href="#">FAQ</a></li>
-					</ul>
-				</div>
-				<div class="footWrap">
-					<div class="intro">
-						<p>동아리명&ensp;:&ensp;<span>CROSS IT(크아)</span></p>
-						<p>팀&emsp;&emsp;명&ensp;:&ensp;<span>에취에취</span></p>
-						<p>팀&emsp;&emsp;원&ensp;:&ensp;<span>박재현(기획)&emsp;&ensp;이동건(개발)&emsp;&ensp;이현빈(개발)&emsp;&ensp;한여경(개발)&emsp;&ensp;이승태(디자인)</span></p>
-						<p>전화번호&ensp;:&ensp;<span>1588-5588</span> &emsp;&ensp;이메일&ensp;:&ensp;<span>help@naver.com</span></p>
-						<p style="margin-top:18px; font-size:12px; letter-spacing: -0.7px; opacity: 0.7">-copyright(c)2017 Mochi Inc.All right reserved.</p>
-					</div>
-				</div>
-			</footer>
+				<jsp:include page="footer.jsp"></jsp:include>
 			</div>
 		<!-- Scripts -->
 			<script src="resources/assets/js/jquery.min.js"></script>
