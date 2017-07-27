@@ -138,6 +138,7 @@ public class PortfController {
 		return "portinst";
 	}
 	
+	//insert skill or portfolio in resume
 	@RequestMapping(value = "/portinsert.do", method = RequestMethod.POST)
 	public String insertPf(HttpSession session,@ModelAttribute("workskill") Workskill wsk, 
 			@ModelAttribute("portfo") Portfo pf,MultipartHttpServletRequest muRequest){
@@ -146,6 +147,11 @@ public class PortfController {
 		}*/
 		portfDao.createProj(pf);
 		portfDao.createSkill(wsk);
+		Iterator<String> itr = muRequest.getFileNames();
+		while(itr.hasNext()){
+			
+			
+		}
 		return "";
 	}
 }

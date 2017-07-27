@@ -77,14 +77,12 @@ public class LoginController {
 //		return "<script>document.write(document.cookie);</script>";
 //	}
 	
-	@RequestMapping(value = "/loginform")
-	public String loginForm(Model model) {
-		//페이지 이동.
-		
-			return "login";
-		
+	//로그인 페이지
+	@RequestMapping(value = "/login")
+	public String loginForm() {
+		return "login";
 	}
-	@RequestMapping(value = "/login" , method=RequestMethod.POST)
+	@RequestMapping(value = "/login.do" , method=RequestMethod.POST)
 	public String login(@RequestParam String loginid,@RequestParam String loginpw,Model model,HttpSession session) {
 	
 		//세션 생성.

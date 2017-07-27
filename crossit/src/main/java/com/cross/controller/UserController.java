@@ -23,15 +23,16 @@ import com.cross.util.Validation;
 @Controller
 public class UserController {
 	
+	//아이디 비밀번호 찾기
 	@Autowired
 	private UserDaoImpl userDao;
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
 	// findid
-	@RequestMapping(value = "/test", method=RequestMethod.GET)
-	public String findidPage(Model model){
-		return "/main/findid";
+	@RequestMapping(value = "/findid", method=RequestMethod.GET)
+	public String findidPage(){
+		return "/findid";
 	}
 	 
 	@RequestMapping(value = "/testid" , method= RequestMethod.POST)
@@ -53,9 +54,9 @@ public class UserController {
 	}
 	
 	//findpwd(temp password)
-	@RequestMapping(value = "/test2", method=RequestMethod.GET)
+	@RequestMapping(value = "/findpw", method=RequestMethod.GET)
 	public String findpwPage(Model model){
-		return "/main/findpw";
+		return "/findpw";
 	}
 	
 	@RequestMapping(value = "/testpw" , method= RequestMethod.POST)
@@ -78,5 +79,11 @@ public class UserController {
 		map.put("pw", tempPwd);
 		System.out.println(map);
 		return map;
+	}
+	
+	@RequestMapping(value = "/mypage" , method= RequestMethod.GET)
+	public String mypage(){
+		return "modifyinfo";
+		
 	}
 }
