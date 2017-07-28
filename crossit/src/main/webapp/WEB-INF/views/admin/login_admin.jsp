@@ -8,13 +8,13 @@
     <title>모취모취 로그인</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/resources/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/assets/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/assets/css/style-responsive.css" rel="stylesheet">
   </head>
 
   <body>
@@ -26,19 +26,19 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="index.html">
+		      <form class="form-login" action="loginChkadmin" method="post">
 		        <h2 class="form-login-heading">관리자 로그인</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="User ID" autofocus>
+		            <input type="text" name="admin_id" class="form-control" placeholder="User ID" autofocus>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password">
+		            <input type="password" class="form-control" placeholder="Password" name="pwd">
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="#" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-		            <button class="btn btn-danger btn-block" href="history.back(0)"> 돌아가기</button>
+		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <input class="btn btn-danger btn-block" value="돌아가기" onclick="location.href='/free/main';" type="button">
 		            <hr>
 		            
 		            <div class="login-social-link centered" style="display: none;">
@@ -53,7 +53,7 @@
 		        </div>
 		
 		          <!-- Modal -->
-		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
 		              <div class="modal-dialog">
 		                  <div class="modal-content">
 		                      <div class="modal-header">
@@ -78,14 +78,13 @@
 	  	
 	  	</div>
 	  </div>
-
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/assets/js/jquery.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/assets/js/bootstrap.min.js"></script>
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/jquery.backstretch.min.js"></script>
     <script>
         $.backstretch("assets/img/login-bg.jpg", {speed: 500});
     </script>

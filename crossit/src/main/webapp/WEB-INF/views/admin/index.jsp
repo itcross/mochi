@@ -10,7 +10,6 @@
       <%@ include file="header.jsp" %>
      	 <!-- 사이드-->
       <%@ include file="sidebar.jsp" %>
-      
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">

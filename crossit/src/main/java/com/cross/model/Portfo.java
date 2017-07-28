@@ -6,7 +6,8 @@ public class Portfo {
 	public String prj_name;
 	public String p_content;
 	public String used_skill;
-	public String period;
+	public String period_st;
+	public String period_ex;
 	
 	public Portfo(){
 		
@@ -42,11 +43,21 @@ public class Portfo {
 	public void setUsed_skill(String used_skill) {
 		this.used_skill = used_skill;
 	}
-	public String getPeriod() {
-		return period;
+
+	public String getPeriod_st() {
+		return period_st;
 	}
-	public void setPeriod(String period) {
-		this.period = period;
+
+	public void setPeriod_st(String period_st) {
+		this.period_st = period_st;
+	}
+
+	public String getPeriod_ex() {
+		return period_ex;
+	}
+
+	public void setPeriod_ex(String period_ex) {
+		this.period_ex = period_ex;
 	}
 	
 	

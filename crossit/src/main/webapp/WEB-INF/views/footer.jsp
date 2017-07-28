@@ -8,7 +8,7 @@
 					<li style="width: 16.6%;"><a href="#">이용약관</a></li>
 					<li style="width: 16.6%;"><a href="#">개인정보보호정책</a></li>
 					<li style="width: 16.6%;"><a href="#">저작권보호정책</a></li>
-					<li style="width: 16.6%;"><a href="#">사이트맵</a></li>
+					<li style="width: 16.6%;"><a href="admin/login">사이트맵</a></li>
 					<li style="width: 16.6%;"><a href="#">FAQ</a></li>
 				</ul>
 			</div>

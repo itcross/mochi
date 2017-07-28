@@ -45,18 +45,6 @@ public class LoginController {
 	
 	private 	static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
-//	@RequestMapping(value = "/login",method = RequestMethod.GET)
-//	public ModelAndView loginPage(HttpSession session) {
-//		ModelAndView mv = new ModelAndView();
-//		String uid = (String)session.getAttribute("id");
-//		if(uid != null){
-//			mv.setViewName("redirect:/logins");
-//			return mv;
-//		}
-//		mv.setViewName("/main/login");
-//		return mv;
-//	}
-//	
 //	@RequestMapping(value = "/login.do" , method = RequestMethod.POST)
 //	@ResponseBody
 //	public int loginCheck(@RequestParam String user_id, @RequestParam String user_pwd, HttpSession session) throws Exception{
@@ -78,9 +66,16 @@ public class LoginController {
 //	}
 	
 	//로그인 페이지
-	@RequestMapping(value = "/login")
-	public String loginForm() {
-		return "login";
+	@RequestMapping(value = "/login",method = RequestMethod.GET)
+	public ModelAndView loginPage(HttpSession session) {
+		ModelAndView mv = new ModelAndView();
+		String uid = (String)session.getAttribute("id");
+		if(uid != null){
+			mv.setViewName("redirect:/main");
+			return mv;
+		}
+		mv.setViewName("login");
+		return mv;
 	}
 	
 	//로그인 체크
