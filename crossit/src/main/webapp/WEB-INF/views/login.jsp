@@ -1,19 +1,17 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<!DOCTYPE HTML>
 <html>
-<head>
-
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Landed by HTML5 UP</title>
+	<head>
+		<title>모취모취 로그인</title>
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="resources/style.css">
-		<link rel="stylesheet" href="resources/assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css?ver=0.1">
 		<script>
 		  
 		function loginCheck({
@@ -34,10 +32,9 @@
 		           
 		            return true;
 		        });
-		   
-		
-		</script>
+	</script>
 	</head>
+	
 	<body class="landing">
 		<div id="page-wrapper">
 			<jsp:include page="header.jsp"></jsp:include>
@@ -73,13 +70,12 @@
 				<jsp:include page="footer.jsp"></jsp:include>
 			</div>
 		<!-- Scripts -->
-			<script src="resources/assets/js/jquery.min.js"></script>
-			<script src="resources/assets/js/jquery.scrolly.min.js"></script>
-			<script src="resources/assets/js/jquery.dropotron.min.js"></script>
-			<script src="resources/assets/js/jquery.scrollex.min.js"></script>
-			<script src="resources/assets/js/skel.min.js"></script>
-			<script src="resources/assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="resources/mochi.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.scrolly.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.dropotron.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.scrollex.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/skel.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/mochi.js"></script>
 	</body>
 </html>

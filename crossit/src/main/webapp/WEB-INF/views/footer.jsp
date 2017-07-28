@@ -1,11 +1,5 @@
-
-<%@page import="java.util.HashMap"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-<!DOCTYPE HTML>
-<html>
 <!-- Footer -->
 		<footer id="footer">
 			<div class="foot_menu">
@@ -36,4 +30,3 @@
 			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
 			<script src="${pageContext.request.contextPath}/resources/mochi.js"></script>
 		</footer>
-</html>

@@ -82,6 +82,8 @@ public class LoginController {
 	public String loginForm() {
 		return "login";
 	}
+	
+	//로그인 체크
 	@RequestMapping(value = "/login.do" , method=RequestMethod.POST)
 	public String login(@RequestParam String loginid,@RequestParam String loginpw,Model model,HttpSession session) {
 	
@@ -91,7 +93,7 @@ public class LoginController {
 		if(check==true){
 			//성공 화면 리턴
 			session.setAttribute("id",loginid);
-		    return "checkSuccess";
+		    return "main";
 		}
 		else{
 			model.addAttribute("msg", "failure"); 
