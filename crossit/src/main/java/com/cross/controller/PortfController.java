@@ -40,11 +40,18 @@ public class PortfController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(PortfController.class);
 
-	//전체 포트폴리오
+	//메인 포트폴리오
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String portList(Model model) {
+	public String portMain(Model model) {
 		//model.addAttribute("portl",portfDao.listPortf());
 		return "portmain";
+	}
+	
+	//포트폴리오 리스트
+	@RequestMapping(value = "/portfolio", method = RequestMethod.GET)
+	public String portList(Model model) {
+		model.addAttribute("portl",portfDao.listPortf());
+		return "portlist";
 	}
 
 	//개인 포트 이력
@@ -89,6 +96,20 @@ public class PortfController {
 		mv.setViewName("/main/login");*/
 		return mv;
 	} 
+	
+	//포트폴리오 삭제
+	/*@RequestMapping(value = "/portdel.do" , method = RequestMethod.POST)
+	public String delPortf(HttpSession session,Model model){
+		//세션이 없다면 글삭제 권한 없음
+		if(session.getAttribute("user_id") != null){
+			//글 작성자와 현재 로그인된 세션아이디 일치 여부
+			String sessid = (String)session.getAttribute("user_id");
+		}else{
+			model.addAttribute("msg", "삭제할 권한이 없습니다.");
+			return "list";
+		}
+		return "";
+	} */
 	
 	//picture upload
 	@RequestMapping(value = "portimgup" , method = RequestMethod.POST )
@@ -141,17 +162,29 @@ public class PortfController {
 	//insert skill or portfolio in resume
 	@RequestMapping(value = "/portinsert.do", method = RequestMethod.POST)
 	public String insertPf(HttpSession session,@ModelAttribute("workskill") Workskill wsk, 
-			@ModelAttribute("portfo") Portfo pf,MultipartHttpServletRequest muRequest){
+			@ModelAttribute("portfo") Portfo pf){
 		/*if(session.getAttribute("user_id")!=null){
 			
 		}*/
+		pf.setUser_id("a");
+		wsk.setUser_id("a");
 		portfDao.createProj(pf);
+		System.out.println(pf);
 		portfDao.createSkill(wsk);
-		Iterator<String> itr = muRequest.getFileNames();
-		while(itr.hasNext()){
-			
-			
-		}
-		return "";
+		return "portinst";
 	}
+	/*
+	//Image window popup
+	@RequestMapping(value = "/projimgpop", method = RequestMethod.GET)
+	public String openWinPopup(){
+		return "imguppop"; //팝업창
+	}
+	
+	//upload file 
+	@RequestMapping(value = "/projimgpop", method = RequestMethod.GET)
+	public String fileUpPopup(MultipartHttpServletRequest muRequest){
+		muRequest.getFileNames();
+		return "imguppop"; //팝업창
+	}*/
+	
 }

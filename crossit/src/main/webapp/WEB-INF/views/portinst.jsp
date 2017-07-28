@@ -51,12 +51,13 @@ PHONE : <input type="text" name="r_phone"><br>
 프로젝트명 : <input type="text" name="PRJ_NAME"> <br>
 프로젝트내용 : <input type="text" name="P_CONTENT"><br>
 사용 스킬 : <input type="text" name="USED_SKILL"><br>
-기간 : <input type="text" name="PERIOD_ST" size="10px"> ~ <input type="text" name="PERIOD_ex" size="10px"><br>
-<h3>이미지앨범</h3>
-앨범명 : <input type="text" name="CATEGORY"><br>
-이미지 : <input type="file" name="IMAGE"><br>
-<input type="submit" value="등록" style="background:black;">
+기간 : <input type="date" name="PERIOD_ST" size="10px"> ~ <input type="date" name="PERIOD_ex" size="10px"><br>
+<input type="submit" value="중간저장" style="background:black;">
 </form>
+<h3>이미지앨범(진행중)</h3>
+앨범명 : <input type="text" name="CATEGORY"><br>
+이미지 : <input type="button" value="이미지 업로드" onclick="ImgupPop();" style="background:black;" ><br>
+
 
 <script>
 	function fileSubmit(){
@@ -76,6 +77,10 @@ PHONE : <input type="text" name="r_phone"><br>
 	            console.log(error.status);
 	        }
 	    });
+	}
+	function ImgupPop(){
+		window.open("http://localhost:7777/free/projimgpop",
+				"이미지 및 파일 업로드","width=300,height=300,location=no,scrollbars=no");
 	}
 </script>
 </body>

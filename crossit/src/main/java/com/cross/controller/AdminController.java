@@ -27,6 +27,7 @@ import com.cross.service.BoardDao;
 import com.cross.model.User;
 import com.cross.service.RegiMybatisDAO;
 import com.cross.service.UserDao;
+import com.cross.util.Validation;
 
 /**
  * Handles requests for the application home page.
@@ -38,24 +39,59 @@ public class AdminController {
 	private static final int pageMax=10;//페이지 그룹에서 페이지의 갯수
 	@Autowired
 	private BoardDao boDao;
-
+	
+	@Autowired
+	private UserDao uDao;
+	
 	private RegiMybatisDAO rDao;
 	
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
-	/*
-	@RequestMapping(value = "/") 
-	public String home(Locale locale, Model model) {
-		logger.info("welcome ! admin page");
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		return "/admin/index";
-	}
 	
+	//관리자 로그인페이지
+	@RequestMapping(value = "/login", method = RequestMethod.GET) 
+	public String loginPage(HttpSession session) {
+		if(session.getAttribute("user_id")!="admin"){
+			return "/admin/login_admin";
+		}else{
+			return "redirect:/admin/mochi";
+		}
+	}
+	//관리자 로그인 do
+	@RequestMapping(value = "/loginChkadmin", method = RequestMethod.POST) 
+	public String doLogin(Model model,HttpSession session,@RequestParam("admin_id")String id, 
+			@RequestParam("pwd")String pwd) {
+		
+		if(id.equals("admin")){
+			User user = uDao.getUser(id);
+			if(Validation.loginChk(user, pwd)){
+				session.setAttribute("user_id", "admin");
+				session.setMaxInactiveInterval(10);
+				return "redirect:/admin/mochi";
+			}
+			return "redirect:/admin/login";
+		}else{
+			return "redirect:/admin/login";
+		}
+	}
+	//관리자 메인
+	@RequestMapping(value = "/mochi", method = RequestMethod.GET) 
+	public ModelAndView adminMain(HttpSession session) {
+		ModelAndView mv = new ModelAndView();
+		if(session.getAttribute("user_id")!="admin"){
+			mv.setViewName("/admin/login_admin");
+			return mv;
+		}else{
+			mv.setViewName("/admin/index");
+			return mv;
+		}
+	}
+	//관리자 로그아웃
+	@RequestMapping(value = "/logout.do", method = RequestMethod.GET) 
+	public String logOut(HttpSession session) {
+		session.invalidate();
+		return "redirect:/admin/login";	
+	}
+	/*
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public String boardList(@RequestParam(value= "pageNum", required= false)String pageNum,Model model) {
 		

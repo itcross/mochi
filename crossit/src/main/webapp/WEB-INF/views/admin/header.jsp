@@ -5,10 +5,6 @@
 	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
     <title>DASHGUM - FREE Bootstrap Admin Template</title>
 
     <!-- Bootstrap core CSS -->
@@ -182,11 +178,24 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="logout.do">Logout</a></li>
             	</ul>
             </div>
         </header>
       <!--header end-->
+      <script src="${pageContext.request.contextPath}/resources/assets/js/jquery.js"></script>
 </body>
+<script type="text/javascript">
+	$(function(){
+		$(".logout").click(function(){
+			if(confirm("정말로 로그아웃하시겠습니까?")){
+				return true;
+			}else{
+				return false;
+			}
+		});
+	})
+
+</script>
 
  </html>
