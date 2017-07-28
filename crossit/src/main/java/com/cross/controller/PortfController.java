@@ -41,10 +41,10 @@ public class PortfController {
 	private static final Logger logger = LoggerFactory.getLogger(PortfController.class);
 
 	//전체 포트폴리오
-	@RequestMapping(value = "/portlist", method = RequestMethod.GET)
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String portList(Model model) {
-		model.addAttribute("portl",portfDao.listPortf());
-		return "portlist";
+		//model.addAttribute("portl",portfDao.listPortf());
+		return "portmain";
 	}
 
 	//개인 포트 이력

@@ -1,4 +1,3 @@
-
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -10,8 +9,9 @@
 		<title>개인정보 수정</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="style.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css?ver=0.1">
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
@@ -98,12 +98,12 @@
 				<jsp:include page="footer.jsp"></jsp:include>
 			</div>
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="mochi.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.scrolly.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.dropotron.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.scrollex.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/skel.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/mochi.js"></script>
 	</body>
 </html>

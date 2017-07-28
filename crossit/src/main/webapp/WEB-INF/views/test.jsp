@@ -1,3 +1,4 @@
+
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -5,14 +6,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>비밀번호 찾기</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css?ver=0.1">
-	</head>
 	<body class="landing">
 		<div id="page-wrapper">
 			<jsp:include page="header.jsp"></jsp:include>
@@ -56,14 +49,7 @@
 				</div>
 				<jsp:include page="footer.jsp"></jsp:include>
 			</div>
-		<!-- Scripts -->
-			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>
-			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.scrolly.min.js"></script>
-			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.dropotron.min.js"></script>
-			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.scrollex.min.js"></script>
-			<script src="${pageContext.request.contextPath}/resources/assets/js/skel.min.js"></script>
-			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
-			<script src="${pageContext.request.contextPath}/resources/mochi.js"></script>
+		
 	</body>
 	<script type="text/javascript">
 	$(function(){
